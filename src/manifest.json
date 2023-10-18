@@ -3,7 +3,10 @@
   "name": "HonestHeadlines",
   "version": "1.0",
   "description": "A Chrome extension that detects and highlights news headlines for clarity and honesty.",
-  "permissions": ["activeTab"],
+  "permissions": [
+    "activeTab",
+    "https://api.openai.com/"
+  ],
 
   "icons": {
     "48": "icon.png",
@@ -23,7 +26,8 @@
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "run_at": "document_end"
+      "run_at": "document_end",
+      "type": "module"
     }
   ],
 
